@@ -1,0 +1,75 @@
+
+body{
+    background: #182033;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+h1{
+    font-size: 50px;
+    color: yellow;
+}
+
+#cenario{
+    background: url(img/green-hill-background.jpg);
+    background-size: cover;
+    width: 1600px;
+    height: 680px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+#boneco{
+    width: 170px;
+    height: 200px;
+    font-size: 80px;
+    position: absolute;
+    bottom: 90px;
+    left: 40px;
+}
+
+#sonic{
+    width: 180px;
+    height: 200px;
+}
+
+#egg-man{
+    width: 220px;
+    height: 270px;
+}
+
+#obstaculo{
+    width: 280px;
+    height: 270px;
+    position: absolute;
+    bottom: 275px;
+    right: -900px;
+    animation: mover 3s linear infinite;
+}
+
+@keyframes mover {
+    0% {
+    right: -80px;
+    }
+    100% {
+    right: 100%;
+    }
+}
+
+@keyframes pular {
+    0% {
+    bottom: 150px; /* Mesma altura do .sonic no CSS */
+    }
+    50% {
+    bottom: 280px; /* Altura máxima do pulo */
+    }
+    100% {
+    bottom: 150px; /* Volta exatamente para o chão */
+    }
+}
+
+.pulando{
+    animation: pular 0.5s ;
+}
